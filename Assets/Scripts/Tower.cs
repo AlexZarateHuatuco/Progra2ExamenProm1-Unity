@@ -137,6 +137,12 @@ public class Tower : Entities
         }
 
         GameObject nuevaBala = Instantiate(prefabBala, puntoOrigen, Quaternion.identity);
+
+        Projectile scriptBala = nuevaBala.GetComponent<Projectile>();
+        if (scriptBala != null)
+        {
+            scriptBala.Configurar(enemigoObjetivo, dano);
+        }
     }
 
     public override void RecibirDano(int cantidad)
