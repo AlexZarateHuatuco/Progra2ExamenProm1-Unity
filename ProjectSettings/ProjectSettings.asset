@@ -922,13 +922,13 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 81c2523c-dea4-4eb0-9fc0-993f1f9a30e3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Progra2-ExamenP1Unity
-  organizationId: azarate45
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
