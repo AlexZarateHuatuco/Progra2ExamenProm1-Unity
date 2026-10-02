@@ -70,7 +70,6 @@ public class Game : MonoBehaviour
     }
     void MostrarTorresConstruidas()
     {
-        /*
         if (torresConstruidas.Count == 0)
         {
             Console.WriteLine("No hay torres construidas.");
@@ -83,13 +82,12 @@ public class Game : MonoBehaviour
                 Console.WriteLine($"Torre {i}: {torresConstruidas[i].Nombre}, Nivel: {torresConstruidas[i].Nivel}, Daño: {torresConstruidas[i].Daño}");
             }
         }
-        */
     }
     void ConstruirTorrePequeña()
     {
         if (oro >= 100)
         {
-            //torresConstruidas.Add(new TorrePequeña());
+            torresConstruidas.Add(new SmallTower("pequeña",100,20));
             oro -= 100;
         }
 
@@ -98,13 +96,12 @@ public class Game : MonoBehaviour
     {
         if (oro >= 200)
         {
-            //torresConstruidas.Add(new TorreFuerte());
+            torresConstruidas.Add(new BuffTower("fuerte", 100, 20));
             oro -= 200;
         }
     }
     void DestruirTorre()
     {
-        /*
         Console.WriteLine("Que torre deseas destruir?");
         for (int i = 0; i < torresConstruidas.Count; i++)
         {
@@ -120,7 +117,13 @@ public class Game : MonoBehaviour
         {
             Console.WriteLine("Opción inválida.");
         }
-        */
+    }
+    void TerminarTurno()
+    {
+        foreach (Tower torre in torresConstruidas)
+        {
+            torre.AtacarEnemigoActual();
+        }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
